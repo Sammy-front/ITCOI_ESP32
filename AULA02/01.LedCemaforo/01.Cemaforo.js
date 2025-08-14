@@ -1,31 +1,31 @@
-let LED = 4;
-let LED2 = 16;
-let LED3 = 17;
+let LEDvermelho = 4;
+let LEDamarelo = 16;
+let LEDverde = 17;
 
-pinMode(LED, "output");
-pinMode(LED2, "output");
-pinMode(LED3, "output");
+pinMode(LEDvermelho, "output");
+pinMode(LEDamarelo, "output");
+pinMode(LEDverde, "output");
 
 function semaforo() {
 
-    digitalWrite(LED, 0);
-    digitalWrite(LED2, 0);
-    digitalWrite(LED3, 1);
+    digitalWrite(LEDvermelho, 0);
+    digitalWrite(LEDamarelo, 0);
+    digitalWrite(LEDverde, 1);
 
 
     setTimeout(function () {
-        digitalWrite(LED, 0);
-        digitalWrite(LED2, 1);
-        digitalWrite(LED3, 0);
+        digitalWrite(LEDvermelho, 0);
+        digitalWrite(LEDamarelo, 1);
+        digitalWrite(LEDverde, 0);
 
         setTimeout(function () {
-            digitalWrite(LED, 1);
-            digitalWrite(LED2, 0);
-            digitalWrite(LED3, 0);
+            digitalWrite(LEDvermelho, 1);
+            digitalWrite(LEDamarelo, 0);
+            digitalWrite(LEDverde, 0);
 
-            setTimeout(semaforo, 8000);
-        }, 5000);
-    }, 8000)
+            setTimeout(semaforo, 2000);
+        }, 1000);
+    }, 2000)
 };
 
 
