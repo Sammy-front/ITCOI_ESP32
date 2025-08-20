@@ -1,6 +1,6 @@
-let RGBVermelho = 4;
-let RGBVerde = 17;
-let RGBAzul = 21;
+let RGBVermelho = 21;
+let RGBVerde = 4;
+let RGBAzul = 23;
 let Button = 18;
 let Button2 = 19;
 
@@ -19,7 +19,7 @@ analogWrite(RGBAzul, 0);
 //     let statusButton = digitalRead(Button);
 //     let statusButton2 = digitalRead(Button2);
 //     console.log("Button Status: " + statusButton);
-//     if (statusButton == statusButton2 && statusButton == 0) {
+//     if (statusButton == statusButton2 && statusButton == 0 && statusButton2 == 0) {
 //         analogWrite(RGBVermelho, 0.5);
 //         analogWrite(RGBVerde, 0);
 //         analogWrite(RGBAzul, 1);
@@ -38,9 +38,9 @@ let estadoBotao2 = 1;
 
 function ligarDesligarLED() {
     if (ledLigado) {
-        analogWrite(RGBVermelho, 0.5);
-        analogWrite(RGBVerde, 0);
-        analogWrite(RGBAzul, 1);
+        analogWrite(RGBVermelho, 0.1);
+        analogWrite(RGBVerde, 0.25);
+        analogWrite(RGBAzul, 0.6);
     } else {
         analogWrite(RGBVermelho, 0);
         analogWrite(RGBVerde, 0);

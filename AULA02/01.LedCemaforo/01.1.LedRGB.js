@@ -1,6 +1,6 @@
 let pinoVermelho = 4;  // Pino PWM para vermelho
-let pinoVerde = 16;    // Pino PWM para verde
-let pinoAzul = 17;     // Pino PWM para azul
+let pinoVerde = 23;    // Pino PWM para verde
+let pinoAzul = 21;     // Pino PWM para azul
 
 // Configurar pinos como saída
 pinMode(pinoVermelho, "output");
