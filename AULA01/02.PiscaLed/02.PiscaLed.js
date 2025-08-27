@@ -2,7 +2,7 @@ let LED = 2;
 
 let LEDSTATUS = 0;
 
-pinmode(LED, "output")
+pinMode(LED, "output")
 
 function PiscaLED() {
 
