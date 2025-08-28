@@ -8,6 +8,8 @@ setInterval(() => {
     let angulo = 2.7 * ValorPot;
     console.log("Angulo: " + angulo.toFixed(2) + "\n")
 
-    if (ValorPot < )
+    if (ValorPot < 55) {
+        
+    }
 
 }, 100);
