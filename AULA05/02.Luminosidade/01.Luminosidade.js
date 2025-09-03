@@ -8,25 +8,9 @@ pinMode(LedAmarelo, "output")
 pinMode(LedVermelho, "output")
 
 setInterval(() => {
-    let ValorLuz = analogRead(POT) * 100;
+    let ValorLuz = analogRead(POT);
     console.log("Nível de LUZ: " + ValorLuz.toFixed(2))
-
-if (ValorLuz >= 5 && ValorLuz <= 24) {
-    digitalWrite(LedVerde, 1);
-    digitalWrite(LedAmarelo, 0);
-    digitalWrite(LedVermelho, 0);
-} else if (ValorLuz <= 54 && ValorLuz >= 25) {
-    digitalWrite(LedVerde, 0);
-    digitalWrite(LedAmarelo, 1);
-    digitalWrite(LedVermelho, 0);
-} else if (ValorLuz >= 54 && ValorLuz <= 100) {
-    digitalWrite(LedVerde, 0);
-    digitalWrite(LedAmarelo, 0);
-    digitalWrite(LedVermelho, 1);
-} else {
-    digitalWrite(LedVerde, 0);
-    digitalWrite(LedAmarelo, 0);
-    digitalWrite(LedVermelho, 0);
-}
-
-}, 100);
+    analogWrite(LedVerde, ValorLuz)
+    analogWrite(LedAmarelo, ValorLuz)
+    analogWrite(LedVermelho, ValorLuz)
+}, 50);
