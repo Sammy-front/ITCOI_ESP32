@@ -9,7 +9,7 @@ pinMode(LedVermelho, "output")
 
 setInterval(() => {
     let ValorPot = analogRead(POT) * 100;
-    console.log("Nível do Tanque: " + ValorPot.toFixed(2))
+    console.log("Nível de LUZ: " + ValorPot.toFixed(2))
 
 if (ValorPot >= 5 && ValorPot <= 24) {
     digitalWrite(LedVerde, 0);

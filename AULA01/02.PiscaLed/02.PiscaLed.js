@@ -1,4 +1,4 @@
-let LED = 2;
+let LED = 26;
 
 let LEDSTATUS = 0;
 
