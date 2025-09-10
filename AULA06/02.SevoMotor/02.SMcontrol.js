@@ -12,9 +12,9 @@ function setPosition() {
         angulo = 180;
 
 
-    let p = 0.05 + (angulo / 180) * (0.1 - 0.05);
+    let p = (2.5 + (angulo / 18))/100;
     analogWrite(SERVO, p, { freq: 50 })
-    console.log("a: " + ValorPot.toFixed(2))
+    console.log("a: " + angulo.toFixed(2), p*100);
 }
 
 setInterval(setPosition, 50)
